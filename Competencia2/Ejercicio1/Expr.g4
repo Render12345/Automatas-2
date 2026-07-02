@@ -1,0 +1,10 @@
+grammar Expr;
+
+root : expr EOF;
+
+//expr: expr MENOS expr | NUM;
+
+expr: EOF;
+NUM:[0-9]+;
+MENOS:'-';
+WS: [ \t\r\n]+ -> skip;
