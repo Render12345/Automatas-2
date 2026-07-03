@@ -27,7 +27,7 @@ class ExprParser ( Parser ):
 
     literalNames = [ "<INVALID>", "<INVALID>", "'+'" ]
 
-    symbolicNames = [ "<INVALID>", "NUM", "MENOS", "WS" ]
+    symbolicNames = [ "<INVALID>", "NUM", "MAS", "WS" ]
 
     RULE_root = 0
     RULE_expr = 1
@@ -36,7 +36,7 @@ class ExprParser ( Parser ):
 
     EOF = Token.EOF
     NUM=1
-    MENOS=2
+    MAS=2
     WS=3
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):

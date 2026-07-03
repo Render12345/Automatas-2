@@ -6,5 +6,5 @@ root : expr EOF;
 
 expr: EOF;
 NUM:[0-9]+;
-MENOS:'+';
+MAS:'+';
 WS: [ \t\r\n]+ -> skip;

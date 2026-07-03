@@ -27,7 +27,7 @@ class ExprLexer(Lexer):
     decisionsToDFA = [ DFA(ds, i) for i, ds in enumerate(atn.decisionToState) ]
 
     NUM = 1
-    MENOS = 2
+    MAS = 2
     WS = 3
 
     channelNames = [ u"DEFAULT_TOKEN_CHANNEL", u"HIDDEN" ]
@@ -38,9 +38,9 @@ class ExprLexer(Lexer):
             "'+'" ]
 
     symbolicNames = [ "<INVALID>",
-            "NUM", "MENOS", "WS" ]
+            "NUM", "MAS", "WS" ]
 
-    ruleNames = [ "NUM", "MENOS", "WS" ]
+    ruleNames = [ "NUM", "MAS", "WS" ]
 
     grammarFileName = "Expr.g4"
 

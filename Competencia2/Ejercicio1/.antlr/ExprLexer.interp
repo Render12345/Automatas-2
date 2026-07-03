@@ -7,12 +7,12 @@ null
 token symbolic names:
 null
 NUM
-MENOS
+MAS
 WS
 
 rule names:
 NUM
-MENOS
+MAS
 WS
 
 channel names:
