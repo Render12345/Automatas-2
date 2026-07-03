@@ -10,7 +10,7 @@ else:
 
 def serializedATN():
     return [
-        4,1,3,10,2,0,7,0,2,1,7,1,1,0,1,0,1,0,1,1,1,1,1,1,0,0,2,0,2,0,0,7,
+        4,1,4,10,2,0,7,0,2,1,7,1,1,0,1,0,1,0,1,1,1,1,1,1,0,0,2,0,2,0,0,7,
         0,4,1,0,0,0,2,7,1,0,0,0,4,5,3,2,1,0,5,6,5,0,0,1,6,1,1,0,0,0,7,8,
         5,0,0,1,8,3,1,0,0,0,0
     ]
@@ -25,9 +25,9 @@ class ExprParser ( Parser ):
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "<INVALID>", "'-'" ]
+    literalNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "'='" ]
 
-    symbolicNames = [ "<INVALID>", "NUM", "MENOS", "WS" ]
+    symbolicNames = [ "<INVALID>", "ID", "NUM", "ASIG", "WS" ]
 
     RULE_root = 0
     RULE_expr = 1
@@ -35,9 +35,10 @@ class ExprParser ( Parser ):
     ruleNames =  [ "root", "expr" ]
 
     EOF = Token.EOF
-    NUM=1
-    MENOS=2
-    WS=3
+    ID=1
+    NUM=2
+    ASIG=3
+    WS=4
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)

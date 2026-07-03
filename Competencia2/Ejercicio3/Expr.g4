@@ -5,6 +5,7 @@ root : expr EOF;
 //expr: expr MENOS expr | NUM;
 
 expr: EOF;
+ID:[a-zA-Z]+;
 NUM:[0-9]+;
-MENOS:'-';
+ASIG:'=';
 WS: [ \t\r\n]+ -> skip;
