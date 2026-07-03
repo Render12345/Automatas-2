@@ -25,7 +25,7 @@ class ExprParser ( Parser ):
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "<INVALID>", "'-'" ]
+    literalNames = [ "<INVALID>", "<INVALID>", "'+'" ]
 
     symbolicNames = [ "<INVALID>", "NUM", "MENOS", "WS" ]
 
